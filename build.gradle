@@ -8,7 +8,7 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
-
+apply plugin: 'maven-publish'
 
 sourceSets
 {
@@ -39,3 +39,18 @@ dependencies {
    	
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'abuzreq.cgp'
+            artifactId = 'cgp'
+            version = "1.0-SNAPSHOT"
+            from components.java
+
+            pom {
+                name = 'ConstrainedGraphPartitioning'
+                description = 'On Using Graph Partitioning with Isomorphism Constraint in Procedural Content Generation'
+            }
+        }
+    }
+}
