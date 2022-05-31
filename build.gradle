@@ -48,8 +48,6 @@ publishing {
             from components.java
 
             pom {
-                name = 'ConstrainedGraphPartitioning'
-                description = 'On Using Graph Partitioning with Isomorphism Constraint in Procedural Content Generation'
             }
         }
     }
